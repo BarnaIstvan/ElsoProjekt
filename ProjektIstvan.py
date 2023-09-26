@@ -48,7 +48,7 @@ elif all(betuk(item) for item in adat):
                 if (csokkeno and adat[j].lower() < adat[j+1].lower()) or (not csokkeno and adat[j].lower() > adat[j+1].lower()):
                     adat[j], adat[j+1] = adat[j+1], adat[j]
         
-buborek_opcio = input("Kérem üsse be, a buborék rendezés növekvő vagy csökkenő sorrendbe rendezze az elemeket ('nov', 'csok'): ") # A felhasználó itt döntheti el, milyen rendezést szeretne a buborék rendezésen belül.
+buborek_opcio = input("Kérem üsse be, a buborék rendezés növekvő vagy csökkenő sorrendbe rendezze az elemeket ('nov', 'csok'): ")
 
 if buborek_opcio == 'nov': 
     buborek_rendezes(adat)
