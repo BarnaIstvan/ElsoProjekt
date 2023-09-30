@@ -34,19 +34,19 @@ print(f"Új elem beillesztve! {adat}")
 
 if all(szamok(item) for item in adat):
     def buborek_rendezes(adat, csokkeno=False):
-        n = len(adat)
+        a = len(adat)
         for i in range(n):
-            for j in range(0, n-i-1):
-                if (csokkeno and int(adat[j]) < int(adat[j+1])) or (not csokkeno and int(adat[j]) > int(adat[j+1])):
-                    adat[j], adat[j+1] = adat[j+1], adat[j]
+            for n in range(0, a-i-1):
+                if (csokkeno and int(adat[n]) < int(adat[n+1])) or (not csokkeno and int(adat[n]) > int(adat[n+1])):
+                    adat[n], adat[n+1] = adat[n+1], adat[n]
 
 elif all(betuk(item) for item in adat):
     def buborek_rendezes(adat, csokkeno=False): 
-        n = len(adat)
-        for i in range(n):
-            for j in range(0, n-i-1):
-                if (csokkeno and adat[j].lower() < adat[j+1].lower()) or (not csokkeno and adat[j].lower() > adat[j+1].lower()):
-                    adat[j], adat[j+1] = adat[j+1], adat[j]
+        a = len(adat)
+        for i in range(a):
+            for n in range(0, n-i-1):
+                if (csokkeno and adat[n].lower() < adat[n+1].lower()) or (not csokkeno and adat[n].lower() > adat[n+1].lower()):
+                    adat[n], adat[n+1] = adat[n+1], adat[n]
         
 buborek_opcio = input("Kérem üsse be, a buborék rendezés növekvő vagy csökkenő sorrendbe rendezze az elemeket ('nov', 'csok'): ")
 
