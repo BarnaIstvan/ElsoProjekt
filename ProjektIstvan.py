@@ -43,7 +43,7 @@ if all(szamok(item) for item in adat):
 elif all(betuk(item) for item in adat):
     def buborek_rendezes(adat, csokkeno=False): 
         a = len(adat)
-        for i in range(a):
+        for i in range(n):
             for n in range(0, n-i-1):
                 if (csokkeno and adat[n].lower() < adat[n+1].lower()) or (not csokkeno and adat[n].lower() > adat[n+1].lower()):
                     adat[n], adat[n+1] = adat[n+1], adat[n]
